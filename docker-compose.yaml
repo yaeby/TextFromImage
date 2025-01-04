@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  spring-ocr:
+    container_name: spring-ocr
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_APPLICATION_NAME=spring-ocr
+    restart: unless-stopped
